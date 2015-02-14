@@ -8,20 +8,19 @@
 #
 # ---------------------------------------------------------
 
-
 from movie_database import Movie
+
 best_movie = Movie.find_highest_rated('imdb_top250.csv')
+#Methods can be called like this: className.method(argument) or by taking an
+#instance of the class and running a method the instance.method(). when you
+# don't apply the method to a specific instanc - you have to
+# use the convention ClassName.method(argument) to specify 
 
 assert type(best_movie) is Movie
-# assert best_movie.title == "The Shawshank Redemption"
-# assert best_movie.imdb_rating == 9.3
-# assert best_movie.director == 'Frank Darabont'
-# assert "imprisoned" in best_movie.plot()
-
-
-
-
-
+assert best_movie.title == "The Shawshank Redemption"
+assert best_movie.imdb_rating == 9.3
+assert best_movie.director == 'Frank Darabont'
+assert "imprisoned" in best_movie.plot()
 
 
 #####
